@@ -14,10 +14,10 @@ npmDependencies in Compile ++= (
 )
 
 useYarn := true
+scalaJSUseMainModuleInitializer := true
 
 libraryDependencies ++= (
   "io.monix" %%% "minitest" % "2.0.0" % "test" ::
-  "io.monadless" %%% "monadless-stdlib" % "0.0.13" % "test" ::
   Nil
 )
 

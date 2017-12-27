@@ -32,7 +32,13 @@ class OrbitDB(ipfs:IPFS) extends js.Object {
 }
 
 @js.native
-trait Log extends js.Object {
+trait Store extends js.Object {
+  def load():Unit = js.native
+}
+
+@js.native
+trait Log extends Store {
   def add(content:String):js.Promise[String] = js.native
+  def iterator():js.Iterable[js.Any] = js.native
 }
 
